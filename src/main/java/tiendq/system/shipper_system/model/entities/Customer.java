@@ -34,5 +34,8 @@ public class Customer {
     private Wallet wallet;
 
     @OneToMany(mappedBy = "customer")
+    private Set<Order> orders;
+
+    @OneToMany(mappedBy = "customer")
     private Set<Vote> votes;
 }
